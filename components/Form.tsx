@@ -65,12 +65,12 @@ const Form: React.FC<FormProps> = ({ placeholder, isComment, postId }) => {
                 resize-none 
                 mt-3 
                 w-full 
-                bg-black 
+                bg-white
                 ring-0 
                 outline-none 
                 text-[20px] 
                 placeholder-neutral-500 
-                text-white
+                text-black
               "
               placeholder={placeholder}>
             </textarea>

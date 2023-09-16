@@ -1,19 +1,31 @@
+/* Tailwind CSS Base Styles */
 @tailwind base;
+
+/* Tailwind CSS Component Styles */
 @tailwind components;
+
+/* Tailwind CSS Utility Classes */
 @tailwind utilities;
+
+/* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600,700&display=swap');
 
+/* Set Root Styles */
 :root {
-  @apply h-full bg-black
+  --bg-color: #ffffff; /* White background */
+  --text-color: #1c1e21; /* Dark text */
+  @apply h-full bg-white; /* Set the background to white */
 }
 
+/* Body Styles */
 body {
-  background-color: black;
+  background-color: var(--bg-color);
   margin: 0;
-  color: white;
+  color: var(--text-color);
   font-family: 'Work Sans', sans-serif;
 }
 
+/* Main Container Styles */
 main {
   height: 100vh;
   width: 85%;
@@ -22,30 +34,33 @@ main {
   flex-direction: row;
 }
 
+/* Sidebar Styles */
 .sidebar {
   width: 20%;
   height: 100%;
-  border-right: 1px solid rgb(48, 48, 48);
+  border-right: 1px solid #e1e8ed; /* Light gray border */
 }
 
+/* Main Content Styles */
 .main {
   width: 50%;
-  /* height: fit-content; */
   height: 100%;
   overflow-x: scroll;
-  box-shadow: 0 0 5px rgb(48, 48, 48);
+  box-shadow: 0 0 5px #e1e8ed; /* Light gray shadow */
 }
 
 .main::-webkit-scrollbar {
   display: none;
 }
 
+/* Follow Styles */
 .follow {
   width: 30%;
   height: 100%;
-  border-left: 1px solid rgb(48, 48, 48);
+  border-left: 1px solid #e1e8ed; /* Light gray border */
 }
 
+/* Responsive Media Queries */
 @media (max-width: 1200px) {
   .sidebar {
     width: auto;
@@ -85,7 +100,7 @@ main {
   .sidebar {
     position: fixed;
     border: none;
-    border-top: 1px solid rgb(18, 18, 18);
+    border-top: 1px solid #e1e8ed; /* Light gray border */
     width: 100vw;
     bottom: 0;
     z-index: 999999;
@@ -96,23 +111,25 @@ main {
   }
 }
 
-/* ------------------------------------------Sidebar-----------------------------------*/
+/* Sidebar Body Styles */
 .sidebar-body {
   display: flex;
   flex-direction: column;
   margin-top: 1vh;
 }
 
+/* Logo Styles */
 .logo {
   height: 50px;
   transform: translateX(-18px);
 }
 
+/* Sidebar Item Styles */
 .sidenav-items-a {
   display: flex;
   flex-direction: row;
   align-items: center;
-  color: white;
+  color: var(--text-color);
   text-decoration: none;
   margin: 2vh 0;
   font-weight: bold;
@@ -124,31 +141,35 @@ main {
 }
 
 .sidenav-items-a:hover {
-  background-color: #212121;
+  background-color: #e1e8ed; /* Light gray background on hover */
   color: #1DA1F2;
 }
 
+/* Sidebar Text Styles */
 .sidenav-text {
   margin-left: 10px;
   font-size: 1.2rem;
 }
 
+/* Sidebar Description Styles */
 .sidenav-desc {
   position: absolute;
   transform: translateY(45px) translateX(-5px);
-  color: white;
+  color: var(--text-color);
   background-color: rgba(20, 50, 80, 0.9);
   padding: 5px;
   display: none;
   font-size: 12px;
 }
 
+/* Post Link Styles */
 .post-a {
   text-decoration: none;
-  color: white;
+  color: var(--text-color);
   cursor: pointer;
 }
 
+/* Post Button Styles */
 .post-button {
   background-color: #1DA1F2;
   width: 70%;
@@ -164,10 +185,12 @@ main {
   background-color: #1A91DA;
 }
 
+/* Post Icon Styles */
 .post-icon {
   display: none;
 }
 
+/* Additional Responsive Styles */
 @media (max-width: 1200px) {
   .sidenav-text {
     display: none;
@@ -209,7 +232,7 @@ main {
   }
 
   .sidebar-body {
-    background-color: rgb(20, 20, 20, 0.95);
+    background-color: rgba(225, 232, 237, 0.95); /* Light gray background with transparency */
     backdrop-filter: blur(10px);
   }
 
@@ -239,50 +262,56 @@ main {
   }
 }
 
-/* ------------------------------------------Followbar-----------------------------------*/
+/* Followbar Styles */
 .followbar {
   margin-top: 2vh;
 }
 
+/* Follow Box Styles */
 .follow-box {
   width: 80%;
   margin: auto;
-  background-color: rgb(22, 24, 28);
+  background-color: #e1e8ed; /* Light gray background */
   border-radius: 15px;
   padding: 15px;
 }
 
+/* Follow Head Styles */
 .follow-head {
   font-size: 1.2rem;
   font-weight: 700;
   margin-bottom: 10px;
 }
 
+/* Follow Users Styles */
 .follow-users {
   display: flex;
   flex-direction: column;
   margin-top: 1.5vh;
 }
 
-/* ------------------------------------------Main-----------------------------------*/
+/* Main Container Styles */
 .home {
   margin-top: 2vh;
   position: relative;
 }
 
+/* Home Header Styles */
 .home-header {
-  border-bottom: 1px solid rgb(48, 48, 48);
+  border-bottom: 1px solid #e1e8ed; /* Light gray border */
   padding-bottom: 2vh;
   display: flex;
   align-items: center;
 }
 
+/* Home Head Styles */
 .home-head {
   margin-left: 2vw;
   font-weight: bold;
   font-size: 1.2rem;
 }
 
+/* Home Icon Styles */
 .home-icon {
   display: flex;
   justify-content: center;
@@ -290,11 +319,13 @@ main {
   opacity: 0;
 }
 
+/* Home Logo Styles */
 .home-logo {
   height: 50px;
   text-align: center;
 }
 
+/* Additional Responsive Styles */
 @media (max-width: 500px) {
   .home-head {
     display: none;
@@ -309,14 +340,13 @@ main {
     display: flex;
     align-items: center;
     width: 100%;
-
   }
 
   .home-header {
     padding-bottom: 5px;
     position: sticky;
     top: 0;
-    border-bottom: 1px solid rgb(28, 28, 28);
+    border-bottom: 1px solid #e1e8ed; /* Light gray border */
   }
 
   .home {
@@ -324,9 +354,10 @@ main {
   }
 }
 
+/* Post Styles */
 .posts {
-  /* background-color: #1A91DA; */
-  /* box-shadow: 0 0 5px rgb(22, 24, 28); */
+  background-color: #ffffff; /* White background for posts */
+  box-shadow: 0 0 5px #e1e8ed; /* Light gray shadow */
   width: 95%;
   margin: 1vh auto;
   border-radius: 20px;
