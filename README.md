@@ -1,8 +1,9 @@
 ## Twitter clone link
 
 ## 🔗 Links
+(https://twitter-clone-git-main-bhanuprasadgantela14.vercel.app/)
+(https://twitter-clone-bhanuprasadgantela14.vercel.app/)
 
-(https://twitter-clone-k7z7-an85vm4he-bhanuprasadgantela14.vercel.app/)
 
 ## Bhanu prasad G
 
